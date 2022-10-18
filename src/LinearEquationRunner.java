@@ -18,11 +18,16 @@ public class LinearEquationRunner {
         String y2 = coordinateTwo.substring(space2+1,coordinateTwo.length()-1);
         int xTwo =  Integer.parseInt(x2);
         int yTwo = Integer.parseInt(y2);
-        LinearEquation equation = new LinearEquation(xOne,yOne,xTwo,yTwo);
-        System.out.print(equation.lineInfo());
+        if (xOne == xTwo){
+            System.out.print("The points are on a vertical line: " + xTwo);
+        }
+        else{
+            LinearEquation equation = new LinearEquation(xOne, yOne, xTwo, yTwo);
 
-
-
-
+//            System.out.println(equation.lineInfo());
+//            System.out.println("Enter a value for x: ");
+//            double x = scan.nextDouble();
+//            System.out.println(equation.calculate(x));
+        }
     }
 }
