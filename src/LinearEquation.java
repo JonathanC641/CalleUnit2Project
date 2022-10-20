@@ -20,7 +20,7 @@ public class LinearEquation {
     }
 
     public double yIntercept(){
-        return Math.round(slope() * 100.0) / 100.0;
+        return y1 - (slope() * x1);
     }
 
 
