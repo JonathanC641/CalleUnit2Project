@@ -29,8 +29,9 @@ public class LinearEquation {
         int y = (y2 - y1);
         int x = Math.abs((x2 - x1));
         String slopeFrac = y + "/" + x + "x";
-        String m;
-        String b;
+        String m; //m representing the slope in the equation y = mx + b//
+        String b; //b representing the y-intercept in the equation y = mx + b//
+        //These if-else statements were created to modify the appearance of the slope//
         if (slope() == 1){
             m = "x";
         }
@@ -50,12 +51,18 @@ public class LinearEquation {
                             m = "" + slope() + "x";
                         }
                         else{
-                            m = "" + slope() + "x";
+                            if( y % x == 0 & slope() > 0){
+                               m = "" + slope() + "x";
+                            }
+                            else{
+                                m = "";
+                            }
                         }
                     }
                 }
             }
         }
+        //This next section of if-else statements were created to modify the y-intercepts appearance in the equation//
         if(yIntercept() < 0){
             b = "- " + Math.abs(yIntercept());
         }
@@ -67,8 +74,13 @@ public class LinearEquation {
                 b ="";
             }
         }
-
-        return "y = " + m + " " + b;
+        if (slope() == 0){
+            b = "" + (int) yIntercept();
+            return "y = " + b;
+        }
+        else{
+            return "y = " + m + b;
+        }
     }
 
 
@@ -85,6 +97,7 @@ public class LinearEquation {
         return "The two points are: (" + x1 + ", " + y1 + ") and " + "(" + x2 + ", " + y2 + ")" + "\n" + "The equation of the line between these points is: " + equation() + "\n" + "The slope of this line is: " + slope() + "\n" + "The y-intercept of the line is: " + yIntercept() + "\n" + "The distance between the two points is: " + distance();
     }
 
+    //The following method was created to take in the users value for x and report the result once x has been inputted into the equation//
     public String calculate(double x){
         double result = (slope() * x) + yIntercept();
         return "The point on the line is: " + "(" + x + ", " + result + ")";
