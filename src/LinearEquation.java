@@ -27,8 +27,17 @@ public class LinearEquation {
     public String equation(){
         int y = Math.abs(y2 - y1);
         int x = Math.abs(x2 - x1);
+        double b = Math.abs(yIntercept()); 
         String slope = "" + slope();
         String slopeFrac = y + "/" + x;
+        if (slope() == 1 & yIntercept() < 0){
+            return "y = x" + " - " + b; 
+        }
+        else{
+            if (slope() == 1 & yIntercept() > 0){
+                return "y = x" + yIntercept();
+            }
+        }
         if (slope.length() < 5 & slope() < 0 & yIntercept() < 0)
             return "y = -" + slope + "x" + " - " + Math.abs(yIntercept());
         else{
