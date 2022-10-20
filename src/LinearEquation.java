@@ -37,51 +37,53 @@ public class LinearEquation {
             if (slope() == 1 & yIntercept() > 0){
                 return "y = x" + yIntercept();
             }
-        }
-        if (slope.length() < 5 & slope() < 0 & yIntercept() < 0)
-            return "y = -" + slope + "x" + " - " + Math.abs(yIntercept());
-        else{
-            if (slope.length() < 4 & slope() > 0 & yIntercept() > 0){
-                return "y = " + slope + "x" + " + " + yIntercept();
-            }
             else{
-                if (slope.length() < 4 & slope() > 0 & yIntercept() < 0){
-                    return "y = " + slope + "x" + " - " + Math.abs(yIntercept());
+                if (slope.length() < 5 & slope() < 0 & yIntercept() < 0){
+                    return "y = -" + slope + "x" + " - " + Math.abs(yIntercept());
                 }
                 else{
-                    if (slope.length() < 5 & slope() < 0 & yIntercept() > 0){
-                        return "y = -" + slope + "x" + " + " + (yIntercept());
+                    if (slope.length() < 4 & slope() > 0 & yIntercept() > 0){
+                        return "y = " + slope + "x" + " + " + yIntercept();
+                }
+                else{
+                    if (slope.length() < 4 & slope() > 0 & yIntercept() < 0){
+                        return "y = " + slope + "x" + " - " + Math.abs(yIntercept());
                     }
                     else{
-                        if (yIntercept() == 0 & slope() < 0){
-                            return "y = -" + slopeFrac + "x";
+                        if (slope.length() < 5 & slope() < 0 & yIntercept() > 0){
+                            return "y = -" + slope + "x" + " + " + (yIntercept());
                         }
                         else{
-                            if (yIntercept() == 0 & slope() > 0){
-                                return "y= " + slopeFrac + "x";
+                            if (yIntercept() == 0 & slope() < 0){
+                                return "y = -" + slopeFrac + "x";
                             }
                             else{
-                                if (slope() == -1 & yIntercept() < 0){
-                                    return "y = -x" + " - " + Math.abs(yIntercept());
+                                if (yIntercept() == 0 & slope() > 0){
+                                    return "y= " + slopeFrac + "x";
                                 }
                                 else{
-                                    if (slope() == 1 & yIntercept() > 0){
-                                        return "y = x" + " + " + yIntercept();
+                                    if (slope() == -1 & yIntercept() < 0){
+                                        return "y = -x" + " - " + Math.abs(yIntercept());
                                     }
                                     else{
-                                        if ((slope() < 0) & (yIntercept() < 0)){
-                                            return "y = -" + slopeFrac + "x" + " - " + Math.abs(yIntercept());
+                                        if (slope() == 1 & yIntercept() > 0){
+                                            return "y = x" + " + " + yIntercept();
                                         }
                                         else{
-                                            if (slope() > 0 & yIntercept() > 0){
-                                                return "y = " + slopeFrac + "x" + " + " + yIntercept();
+                                            if ((slope() < 0) & (yIntercept() < 0)){
+                                                return "y = -" + slopeFrac + "x" + " - " + Math.abs(yIntercept());
                                             }
                                             else{
-                                                if (slope() < 0 & yIntercept() > 0){
-                                                    return "y = -" + slopeFrac + "x" + " + " + yIntercept();
+                                                if (slope() > 0 & yIntercept() > 0){
+                                                    return "y = " + slopeFrac + "x" + " + " + yIntercept();
                                                 }
                                                 else{
-                                                    return "y = " + slopeFrac + "x" + " - " + Math.abs(yIntercept());
+                                                    if (slope() < 0 & yIntercept() > 0){
+                                                        return "y = -" + slopeFrac + "x" + " + " + yIntercept();
+                                                    }
+                                                    else{
+                                                        return "y = " + slopeFrac + "x" + " - " + Math.abs(yIntercept());
+                                                    }
                                                 }
                                             }
                                         }
@@ -92,7 +94,6 @@ public class LinearEquation {
                     }
                 }
             }
-        }
     }
 
 
