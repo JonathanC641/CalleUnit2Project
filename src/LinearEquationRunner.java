@@ -23,8 +23,7 @@ public class LinearEquationRunner {
         }
         else{
             LinearEquation equation = new LinearEquation(xOne, yOne, xTwo, yTwo);
-
-//            System.out.println(equation.lineInfo());
+            System.out.println(equation.lineInfo());
 //            System.out.println("Enter a value for x: ");
 //            double x = scan.nextDouble();
 //            System.out.println(equation.calculate(x));
