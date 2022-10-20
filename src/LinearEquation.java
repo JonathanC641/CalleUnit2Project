@@ -12,16 +12,20 @@ public class LinearEquation {
         this.y2 = y2;
     }
 
+    public double roundedToHundredth(double toRound){
+        return Math.round(toRound * 100.0) / 100.0;
+    }
+
     public double slope(){
         double y = y2 - y1;
         double x = x2 - x1;
         double slope =  y / x;
-        return Math.round(slope * 100.0) / 100.0;
+        return roundedToHundredth(slope);
     }
 
     public double yIntercept(){
         double b = y1 - (slope() * x1);
-        return Math.round(b * 100.0) / 100.0;
+        return roundedToHundredth(b);
     }
 
 
@@ -88,7 +92,7 @@ public class LinearEquation {
         double x = Math.pow(Math.abs(x2-x1),2);
         double y = Math.pow(Math.abs(y2-y1),2);
         double distance = Math.sqrt(y+x);
-        return Math.round(distance * 100.0) / 100.0;
+        return roundedToHundredth(distance);
     }
 
 
@@ -98,8 +102,8 @@ public class LinearEquation {
     }
 
     //The following method was created to take in the users value for x and report the result once x has been inputted into the equation//
-    public String calculate(double x){
-        double result = (slope() * x) + yIntercept();
-        return "The point on the line is: " + "(" + x + ", " + result + ")";
+    public String coordinateForX(double x){
+        double y = (slope() * x) + yIntercept();
+        return "The point on the line is: " + "(" + x + ", " + roundedToHundredth(y) + ")";
     }
 }

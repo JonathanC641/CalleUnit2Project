@@ -31,7 +31,8 @@ public class LinearEquationRunner {
             System.out.println(equation.lineInfo());
             System.out.println("Enter a value for x: ");
             double x = scan.nextDouble();
-            System.out.println(equation.calculate(x));
+            System.out.println(equation.coordinateForX(x));
         }
     }
 }
+//Goomba oaofaefijaeifaifja// 
