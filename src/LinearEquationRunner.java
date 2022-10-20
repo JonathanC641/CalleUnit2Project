@@ -19,7 +19,7 @@ public class LinearEquationRunner {
         int xTwo =  Integer.parseInt(x2);
         int yTwo = Integer.parseInt(y2);
         if (xOne == xTwo){
-            System.out.print("The points are on a vertical line: " + xTwo);
+            System.out.print("The points are on a vertical line: x = " + xTwo);
         }
         else{
             LinearEquation equation = new LinearEquation(xOne, yOne, xTwo, yTwo);

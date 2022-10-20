@@ -27,30 +27,48 @@ public class LinearEquation {
 
     public String equation() {
         int y = (y2 - y1);
-        int x = Math.abs(x2 - x1);
-        String slope = "" + slope();
-        String slopeFrac = y + "/" + x;
-        int slopeLen = slope.length();
-        if (slopeLen == 4 ){
-            return null;
+        int x = Math.abs((x2 - x1));
+        String slopeFrac = y + "/" + x + "x";
+        String m;
+        String b;
+        if (slope() == 1){
+            m = "x";
         }
         else{
-            if (slope() == -1 & yIntercept() < 0) {
-                return "y = " + "-x" + " - " + Math.abs(yIntercept());
-            }
+            if(slope() == -1)
+              m =   "-x";
             else{
-                if (slope() == -1 & yIntercept() > 0){
-                    return "y = " +"-x" + yIntercept();
+                if (y % x != 0 & slope() < 0){
+                    m = "-" + slopeFrac;
                 }
                 else{
-                    return "y = " + "x" + yIntercept();
+                    if(y % x != 0 & slope() > 0){
+                        m = "" + slopeFrac;
+                    }
+                    else{
+                        if (y % x == 0 & slope() < 0){
+                            m = "" + slope() + "x";
+                        }
+                        else{
+                            m = "" + slope() + "x";
+                        }
+                    }
                 }
             }
         }
+        if(yIntercept() < 0){
+            b = "- " + Math.abs(yIntercept());
+        }
+        else{
+            if(yIntercept() > 0){
+                b = " + " + yIntercept();
+            }
+            else{
+                b ="";
+            }
+        }
 
-
-
-
+        return "y = " + m + " " + b;
     }
 
 
