@@ -51,11 +51,11 @@ public class LinearEquation {
                     }
                     else{
                         if (y % x == 0 & slope() < 0){
-                            m = "" + slope() + "x";
+                            m = "" + (int) slope() + "x";
                         }
                         else{
                             if( y % x == 0 & slope() > 0){
-                               m = "" + slope() + "x";
+                               m = "" + (int) slope() + "x";
                             }
                             else{
                                 m = "";
@@ -67,7 +67,7 @@ public class LinearEquation {
         }
         //This next section of if-else statements were created to modify the y-intercepts appearance in the equation//
         if(yIntercept() < 0){
-            b = "- " + Math.abs(yIntercept());
+            b = " - " + Math.abs(yIntercept());
         }
         else{
             if(yIntercept() > 0){

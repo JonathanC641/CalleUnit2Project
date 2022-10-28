@@ -28,11 +28,11 @@ public class LinearEquationRunner {
         }
         else{
             LinearEquation equation = new LinearEquation(xOne, yOne, xTwo, yTwo);
+            System.out.println("----- Line info -----");
             System.out.println(equation.lineInfo());
-            System.out.println("Enter a value for x: ");
+            System.out.print("Enter a value for x: ");
             double x = scan.nextDouble();
             System.out.println(equation.coordinateForX(x));
         }
     }
 }
-//Goomba oaofaefijaeifaifja// 
