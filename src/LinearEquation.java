@@ -24,13 +24,12 @@ public class LinearEquation {
     }
 
     public double yIntercept(){
-        double b = y1 - (slope() * x1);
-        return roundedToHundredth(b);
+        return  y1 - (slope() * x1);
     }
 
 
     public String equation() {
-        int y = (y2 - y1);
+        int y = Math.abs(y2 - y1);
         int x = Math.abs((x2 - x1));
         String slopeFrac = y + "/" + x + "x";
         String m; //m representing the slope in the equation y = mx + b//
