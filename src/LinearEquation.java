@@ -34,6 +34,7 @@ public class LinearEquation {
         String slopeFrac = y + "/" + x + "x";
         String m; //m representing the slope in the equation y = mx + b//
         String b; //b representing the y-intercept in the equation y = mx + b//
+
         //These if-else statements were created to modify the appearance of the slope//
         if (slope() == 1){
             m = "x";
@@ -65,6 +66,7 @@ public class LinearEquation {
                 }
             }
         }
+
         //This next section of if-else statements were created to modify the y-intercepts appearance in the equation//
         if(yIntercept() < 0){
             b = " - " + Math.abs(yIntercept());
